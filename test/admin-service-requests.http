@@ -1,0 +1,13 @@
+@baseUrl = http://localhost:4004
+
+# Get service document ---------------------
+GET {{baseUrl}}/admin
+
+# Get service metadata document ---------------------
+GET {{baseUrl}}/admin/$metadata
+
+# Get all books ---------------------
+GET {{baseUrl}}/admin/Books
+
+# Get all Authors ---------------------
+GET {{baseUrl}}/admin/Books
