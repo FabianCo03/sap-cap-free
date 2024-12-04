@@ -1,0 +1,8 @@
+ID,title,stock,genre,publCountry,isHardcover,price_amount,price_currency,author_ID
+1,Pride and Prejudice,120,Romance,United Kingdom,TRUE,15.99,USD,1
+2,Adventures of Huckleberry Finn,80,Adventure,United States,FALSE,12.50,USD,2
+3,To the Lighthouse,60,Fiction,United Kingdom,TRUE,14.00,USD,3
+4,1984,150,Dystopian,United Kingdom,TRUE,18.99,USD,4
+5,Harry Potter and the Philosopher's Stone,200,Fantasy,United Kingdom,TRUE,25.00,USD,5
+6,Animal Farm,100,Political Satire,United Kingdom,FALSE,9.99,USD,4
+7,Emma,75,Romance,United Kingdom,FALSE,12.00,USD,1
