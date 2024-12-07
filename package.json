@@ -6,8 +6,9 @@
   "license": "UNLICENSED",
   "private": true,
   "dependencies": {
-    "@sap/cds": "^8",
+    "@sap/cds": "^8.5.1",
     "@sap/cds-hana": "^2.0.0",
+    "brew": "^0.0.8",
     "express": "^4"
   },
   "devDependencies": {
@@ -15,7 +16,8 @@
     "@cap-js/sqlite": "^1.7.7"
   },
   "scripts": {
-    "start": "cds-serve"
+    "start": "cds-serve",
+    "start:dev": "cds watch"
   },
   "cds": {
     "requires": {
@@ -23,7 +25,7 @@
         "[development]": {
           "kind": "sqlite",
           "credentials": {
-            "url": "db.sqlite"
+            "url": ":memory:"
           }
         }
       }
