@@ -20,7 +20,8 @@ entity Authors : cuid, managed {
     dateOfBirth : Date;
     dateOfDeath : Date;
     books       : Association to many Books
-                      on books.author = $self
+                      on books.author = $self;
+    epoch       : Association to Epoch
 }
 
 entity Orders {
@@ -32,6 +33,10 @@ entity Orders {
 entity OrderItems {
     key order : Association to Orders;
     key pos   : Integer
+}
+
+entity Epoch {
+    key ID : Integer
 }
 
 type Genre     : Integer enum {
@@ -48,4 +53,12 @@ type NoOfBooks : Integer;
 
 extend Authors with {
     someAdditionalField : String;
+}
+
+aspect CodeList                    @(
+    cds.autoexpose,
+    cds.persistence.skip: 'is-unused'
+) {
+    name  : localized String(255)  @title: '{i18n>Name}';
+    descr : localized String(1000) @title: '{i18n>Description}'
 }
